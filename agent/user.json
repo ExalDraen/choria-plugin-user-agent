@@ -1,0 +1,50 @@
+{
+  "$schema": "https://choria.io/schemas/mcorpc/ddl/v1/agent.json",
+  "metadata": {
+    "license": "GNU General Public License v3.0",
+    "author": "Alexander Hermes (@ExalDraen)",
+    "timeout": 15,
+    "name": "user",
+    "version": "0.1.0",
+    "url": "https://github.com/exaldraen/choria-plugin-user-agent",
+    "description": "Interact with users on a system",
+    "provider": "external"
+  },
+  "actions": [
+    {
+      "action": "echo",
+      "input": {
+        "message": {
+          "prompt": "The message to send for echoing",
+          "description": "This message will be echoed back",
+          "type": "string",
+          "optional": false,
+          "validation": "shellsafe",
+          "maxlength": 512
+        }
+      },
+      "output": {
+        "message": {
+          "description": "Echo of the original message",
+          "display_as": "Echo",
+          "type": "string"
+        }
+      },
+      "display": "ok",
+      "description": "Echo text back"
+    },
+    {
+      "action": "list",
+      "input": {},
+      "output": {
+        "user_list": {
+          "description": "List of logged-in users",
+          "display_as": "User LIst",
+          "type": "string"
+        }
+      },
+      "display": "ok",
+      "description": "List logged-in users on a system"
+    }
+  ]
+}
