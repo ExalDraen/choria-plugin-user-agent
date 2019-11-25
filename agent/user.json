@@ -35,11 +35,20 @@
     },
     {
       "action": "list",
-      "input": {},
+      "input": {
+        "dummy": {
+          "prompt": "Dummy param, workaround",
+          "description": "Dummy param. Workaround for https://github.com/choria-io/mcorpc-agent-provider/issues/126",
+          "type": "string",
+          "optional": true,
+          "validation": "shellsafe",
+          "maxlength": 512
+        }
+      },
       "output": {
         "user_list": {
           "description": "List of logged-in users",
-          "display_as": "User LIst",
+          "display_as": "User List",
           "type": "string"
         }
       },
