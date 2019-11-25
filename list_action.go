@@ -11,7 +11,7 @@ import (
 // that are logged in on a given POSIX system
 func ListAction(request *agent.Request, reply *agent.Reply, config map[string]string) {
 
-	out, err := exec.Command("w --no-header --from").Output()
+	out, err := exec.Command("/usr/bin/w --no-header --from").Output()
 	if err != nil {
 		reply.Statuscode = agent.Aborted
 		reply.Statusmsg = fmt.Sprintf("could not list users %s#%s: %s", request.Agent, request.Action, err)
