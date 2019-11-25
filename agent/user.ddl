@@ -43,10 +43,10 @@ action "list", :description => "List logged-in users on a system" do
 
 
 
-  output :user_list,
-         :description => "List of logged-in users",
-         :display_as  => "User List",
-         :type        => "string"
+  output :sessions,
+         :description => "List of logged-in user sessions",
+         :display_as  => "Session List",
+         :type        => "array"
 
 end
 
