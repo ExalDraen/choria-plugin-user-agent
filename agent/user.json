@@ -1,8 +1,8 @@
 {
   "$schema": "https://choria.io/schemas/mcorpc/ddl/v1/agent.json",
   "metadata": {
-    "license": "GNU General Public License v3.0",
-    "author": "Alexander Hermes (@ExalDraen)",
+    "license": "GPL-3.0-or-later",
+    "author": "exaldraen",
     "timeout": 15,
     "name": "user",
     "version": "0.2.1",
