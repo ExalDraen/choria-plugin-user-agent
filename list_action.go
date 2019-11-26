@@ -32,12 +32,15 @@ func ListAction(request *agent.Request, reply *agent.Reply, config map[string]st
 		return
 	}
 
-	var out []string
-	for _, s := range sess {
-		out = append(out, s.String())
-	}
-	reply.Data = map[string][]string{
-		"sessions": out,
+	// If there are no user sessions, don't send data.
+	if sess != nil {
+		var out []string
+		for _, s := range sess {
+			out = append(out, s.String())
+		}
+		reply.Data = map[string][]string{
+			"sessions": out,
+		}
 	}
 }
 
