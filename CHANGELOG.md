@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+## 0.2.1
+
+### Changed
+
+* Make `kill` action errors more informative
+* Ensure host is reported when running `list`.
+
 ## 0.2.0
 
 ### Added
