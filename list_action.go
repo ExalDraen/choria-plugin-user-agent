@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os/exec"
+	"strings"
 
 	"github.com/choria-io/go-external/agent"
 )
@@ -42,7 +43,7 @@ func ListAction(request *agent.Request, reply *agent.Reply, config map[string]st
 
 // ListUserSessions lists the users logged in sessions
 func ListUserSessions() ([]Session, error) {
-	cmd := exec.Command("/usr/bin/w", "--no-header")
+	cmd := exec.Command("/usr/bin/w", "--from", "--no-header")
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
 		return nil, err
@@ -52,12 +53,13 @@ func ListUserSessions() ([]Session, error) {
 	}
 
 	scanner := bufio.NewScanner(stdout)
-	var name, tty, host, login, idle, jcpu, pcpu, what string
 	res := []Session{}
+	// Scan over each line of w's output and pull out the bits we want
 	for scanner.Scan() {
 		line := scanner.Text()
-		fmt.Sscan(line, &name, &tty, &host, &login, &idle, &jcpu, &pcpu, &what)
-		res = append(res, Session{loginName: name, remoteHost: host, command: what})
+		fields := strings.Fields(line)
+		// The command is the 8th field and may contain spaces
+		res = append(res, Session{loginName: fields[0], remoteHost: fields[2], command: strings.Join(fields[7:], "")})
 	}
 	if err := scanner.Err(); err != nil {
 		return nil, fmt.Errorf("reading `w` output: %s", err)
