@@ -33,7 +33,7 @@ func KillAction(request *agent.Request, reply *agent.Reply, config map[string]st
 func killUserSessions(user string) error {
 	err := exec.Command("/usr/bin/pkill", "-TERM", "-u", user).Run()
 	if err != nil {
-		return err
+		return fmt.Errorf("pkill error: %s", err)
 	}
 	return nil
 }
