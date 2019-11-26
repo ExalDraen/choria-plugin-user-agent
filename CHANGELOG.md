@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+* Preserve spaces when showing the command run in a session
+
 ## 0.2.1
 
 ### Changed

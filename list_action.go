@@ -59,7 +59,7 @@ func ListUserSessions() ([]Session, error) {
 		line := scanner.Text()
 		fields := strings.Fields(line)
 		// The command is the 8th field and may contain spaces
-		res = append(res, Session{loginName: fields[0], remoteHost: fields[2], command: strings.Join(fields[7:], "")})
+		res = append(res, Session{loginName: fields[0], remoteHost: fields[2], command: strings.Join(fields[7:], " ")})
 	}
 	if err := scanner.Err(); err != nil {
 		return nil, fmt.Errorf("reading `w` output: %s", err)
