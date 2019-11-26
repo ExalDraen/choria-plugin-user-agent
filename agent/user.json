@@ -5,7 +5,7 @@
     "author": "Alexander Hermes (@ExalDraen)",
     "timeout": 15,
     "name": "user",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "url": "https://github.com/exaldraen/choria-plugin-user-agent",
     "description": "Interact with users on a system",
     "provider": "external"
