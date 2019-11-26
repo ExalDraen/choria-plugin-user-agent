@@ -50,3 +50,19 @@ action "list", :description => "List logged-in users on a system" do
 
 end
 
+action "kill", :description => "Kill all sessions belonging to the given user" do
+  display :ok
+
+  input :user,
+        :prompt      => "Username",
+        :description => "Name of the user whose sessions will be killed",
+        :type        => :string,
+        :validation  => :shellsafe,
+        :maxlength   => 128,
+        :optional    => false
+
+
+
+
+end
+

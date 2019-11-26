@@ -27,5 +27,6 @@ func main() {
 
 	// action will be invoked on demand
 	userAgent.MustRegisterAction("echo", echoAction)
+	userAgent.MustRegisterAction("kill", KillAction)
 	userAgent.MustRegisterAction("list", ListAction)
 }

@@ -54,6 +54,22 @@
       },
       "display": "ok",
       "description": "List logged-in users on a system"
+    },
+    {
+      "action": "kill",
+      "input": {
+        "user": {
+          "prompt": "Username",
+          "description": "Name of the user whose sessions will be killed",
+          "type": "string",
+          "optional": false,
+          "validation": "shellsafe",
+          "maxlength": 128
+        }
+      },
+      "output": {},
+      "display": "ok",
+      "description": "Kill all sessions belonging to the given user"
     }
   ]
 }
