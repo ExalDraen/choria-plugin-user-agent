@@ -43,7 +43,7 @@ func ListAction(request *agent.Request, reply *agent.Reply, config map[string]st
 
 // ListUserSessions lists the users logged in sessions
 func ListUserSessions() ([]Session, error) {
-	cmd := exec.Command("/usr/bin/w", "--from", "--no-header")
+	cmd := exec.Command("/usr/bin/w", "--no-header")
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
 		return nil, err
