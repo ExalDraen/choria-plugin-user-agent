@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+## 0.2.2
+
+### Changed
+
 * `list`: Preserve spaces when showing the command run in a session
 * `list`: don't send response if there are no user sessions
 
