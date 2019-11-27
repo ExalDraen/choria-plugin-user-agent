@@ -12,28 +12,6 @@
   },
   "actions": [
     {
-      "action": "echo",
-      "input": {
-        "message": {
-          "prompt": "The message to send for echoing",
-          "description": "This message will be echoed back",
-          "type": "string",
-          "optional": false,
-          "validation": "shellsafe",
-          "maxlength": 512
-        }
-      },
-      "output": {
-        "message": {
-          "description": "Echo of the original message",
-          "display_as": "Echo",
-          "type": "string"
-        }
-      },
-      "display": "ok",
-      "description": "Echo text back"
-    },
-    {
       "action": "list",
       "input": {
         "dummy": {

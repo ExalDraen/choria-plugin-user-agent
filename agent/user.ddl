@@ -8,27 +8,6 @@ metadata :name        => "user",
          :timeout     => 15
 
 
-action "echo", :description => "Echo text back" do
-  display :ok
-
-  input :message,
-        :prompt      => "The message to send for echoing",
-        :description => "This message will be echoed back",
-        :type        => :string,
-        :validation  => :shellsafe,
-        :maxlength   => 512,
-        :optional    => false
-
-
-
-
-  output :message,
-         :description => "Echo of the original message",
-         :display_as  => "Echo",
-         :type        => "string"
-
-end
-
 action "list", :description => "List logged-in users on a system" do
   display :ok
 
