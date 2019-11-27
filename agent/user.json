@@ -31,7 +31,15 @@
         }
       },
       "display": "ok",
-      "description": "List logged-in users on a system"
+      "description": "List logged-in users on a system",
+      "aggregate": [
+        {
+          "function": "summary",
+          "args": [
+            "sessions"
+          ]
+        }
+      ]
     },
     {
       "action": "kill",

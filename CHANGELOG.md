@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 * Remove the test action `echo`
+* Add summary to `list` output
 
 ## 0.2.2
 

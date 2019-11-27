@@ -27,6 +27,9 @@ action "list", :description => "List logged-in users on a system" do
          :display_as  => "Session List",
          :type        => "array"
 
+  summarize do
+    summary(:sessions)
+  end
 end
 
 action "kill", :description => "Kill all sessions belonging to the given user" do
