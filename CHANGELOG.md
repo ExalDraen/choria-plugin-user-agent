@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+## 0.3.0
+
+### Changed
+
 * Remove the test action `echo`
 * Add summary to `list` output
 
