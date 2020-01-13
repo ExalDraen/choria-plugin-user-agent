@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+* Remove dummy input from `list` action now that the [bug fix](https://github.com/choria-io/mcorpc-agent-provider/issues/126) has been released. Make a note of the choria version requirement.
+
 ## 0.3.0
 
 ### Changed

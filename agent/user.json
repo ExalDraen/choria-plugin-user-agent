@@ -13,16 +13,7 @@
   "actions": [
     {
       "action": "list",
-      "input": {
-        "dummy": {
-          "prompt": "Dummy param, workaround",
-          "description": "Dummy param. Workaround for https://github.com/choria-io/mcorpc-agent-provider/issues/126",
-          "type": "string",
-          "optional": true,
-          "validation": "shellsafe",
-          "maxlength": 512
-        }
-      },
+      "input": {},
       "output": {
         "sessions": {
           "description": "List of logged-in user sessions",

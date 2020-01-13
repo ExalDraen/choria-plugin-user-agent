@@ -11,15 +11,6 @@ metadata :name        => "user",
 action "list", :description => "List logged-in users on a system" do
   display :ok
 
-  input :dummy,
-        :prompt      => "Dummy param, workaround",
-        :description => "Dummy param. Workaround for https://github.com/choria-io/mcorpc-agent-provider/issues/126",
-        :type        => :string,
-        :validation  => :shellsafe,
-        :maxlength   => 512,
-        :optional    => true
-
-
 
 
   output :sessions,
